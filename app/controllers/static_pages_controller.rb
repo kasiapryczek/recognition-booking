@@ -20,6 +20,6 @@ class StaticPagesController < ApplicationController
       @sponsors = params[:sponsors]
       @adres = params[:adres]
       @message = params[:message]
-      ActionMailer::Base.mail(:from => @email, :to => 'kpryczek@gmail.com', :subject => "a new contact message from #{@name}", :body => @message).deliver_now
+      ActionMailer::Base.mail(:from => @email, :to => 'angi@recognition.pl', :subject => "a new contact message from #{@name}", :body => @message).deliver_now
     end
 end
