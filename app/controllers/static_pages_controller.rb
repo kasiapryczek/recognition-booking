@@ -24,6 +24,6 @@ class StaticPagesController < ApplicationController
         :from => @email, 
         :to => 'angi@recognition.pl', 
         :subject => "New booking request from #{@name}", 
-        :body => "#{@name}, #{@adres}, #{@tel}, #{@email}, #{@adreswww}, #{@date}, #{@set}, #{@duration}, #{@amount}, #{@partyname}, #{@partylocation}, #{@partykind}, #{@people}, #{@sponsors}, #{@artists}, #{@message}").deliver_now
+        :body => "Dane osoby kontaktowej: #{@name}, #{@adres}, #{@tel}, #{@email}, #{@adreswww}, Oferta: #{@date}, #{@set}, #{@duration}, #{@amount}, Dane inprezy: #{@partyname}, #{@partylocation}, #{@partykind}, #{@people}, #{@sponsors}, #{@artists}, #{@message}").deliver_now
     end
 end
