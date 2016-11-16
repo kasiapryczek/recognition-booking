@@ -42,12 +42,8 @@
             
             <div claa="form-group">
                 <%= label_tag :set, 'Jaki set miałby być wykonany w ramach imprezy?' %>
-                <select class="form-control input-sm" id="set" placeholder="Wybierz...">
-                    <option>Experimental/Ambient DJ set</option>
-                    <option>Experimental/Ambient Live act</option>
-                    <option>Techno/Club DJ set</option>
-                    <option>Techno/Club Live act</option>
-                </select>
+                <%= select_tag(:set, options_for_select([ ['Experimental DJ set', "Experimental DJ set"], ['Experimental Live', "Experimental Live"], ['Techno DJ set', "Techno DJ set"], ['Techno Live', "Techno Live"]] ), {:class => 'form-control'})  %>
+
             </div>
             <br>
 
