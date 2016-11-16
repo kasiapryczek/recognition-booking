@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
       @adreswww = params[:adreswww]
       @date = params[:date]
       @set = params[:set]
-      @durtion = params[:duration]
+      @duration = params[:duration]
       @amount = params[:amount]
       @partyname = params[:partyname]
       @partylocation = params[:partylocation]
