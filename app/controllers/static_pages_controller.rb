@@ -20,6 +20,10 @@ class StaticPagesController < ApplicationController
       @sponsors = params[:sponsors]
       @artists = params[:artists]
       @message = params[:message]
-      ActionMailer::Base.mail(:from => @email, :to => 'angi@recognition.pl', :subject => "a new contact message from #{@name}", :body => @name, @adres, @tel, @email, @adreswww, @date, @set, @duration, @amount, @partyname, @partylocation, @partykind, @people, @sponsors, @artists, @message).deliver_now
+      ActionMailer::Base.mail(
+        :from => @email, 
+        :to => 'angi@recognition.pl', 
+        :subject => "New booking request from #{@name}", 
+        :body => "#{@name}, #{@adres}, #{@tel}, #{@email}, #{@adreswww}, #{@date}, #{@set}, #{@duration}, #{@amount}, #{@partyname}, #{@partylocation}, #{@partykind}, #{@people}, #{@sponsors}, #{@artists}, #{@message}).deliver_now
     end
 end
